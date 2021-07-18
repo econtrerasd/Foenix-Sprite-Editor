@@ -87,10 +87,10 @@ SPRITE FILE STRUCTURE
 ---------------------------
 The Save file structure is very simple*
 
-First byte - number of sprites in file
-Sprite data - blocks of 1024 bytes for each sprite in the file
+* First byte - number of sprites in file
+* Sprite data - blocks of 1024 bytes for each sprite in the file
 
-*The file structure might change in the future if more features are introduced, but itif this happens compatibility will be maintained with the current one
+*The file structure might change in the future if more features are introduced, but if this happens compatibility will be maintained with the current file structure
 
 LOADING A SPRITE FROM BASIC
 ----------------------------
