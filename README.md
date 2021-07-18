@@ -16,12 +16,12 @@ While most of the program is in BASIC a Machine Language Routine is required for
 DESCRIPTION
 ----------------------------
 
-SPREDIT is a simple sprite editor writen in BASIC for the Foenix Series of Computers by Stephany Allaire 
+SPREDIT is a simple sprite editor writen in BASIC for the Foenix Series of Computers by Stefany Allaire,  
 check her website for more information https://c256foenix.com/
 
-The Program operates on the 320x240 screen mode, this resolution allows users to see a bigger representation of the sprites
+The Program operates on the 320x240 graphical screen mode, this resolution allows users to see a bigger representation of the sprite, (I consider this useful for editing)
 
-The editor operates in Graphics mode and is divided in the following sections:
+The editor divides the screen in various sections:
 
 * Menu Icons
 * Tools Icons
@@ -29,7 +29,7 @@ The editor operates in Graphics mode and is divided in the following sections:
 * Sprite Editor Grid
 * Sprite Representation
 
-The program Operation will be discussed as we review each of the sections
+The program Operation will be discussed as we review each one of the sections
 
 MENU ICONS               
 ------------------------------------------------
