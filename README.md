@@ -1,8 +1,10 @@
 # Foenix-Sprite-Editor
 By Ernesto Contreras
 
-Requirements:
-The Sprite Editor requires: 
+Requirements
+--------------
+The Sprite Editor requires the following to operate
+
 1. Foenix U, Foenix U+ or Foenix FMX computer 
 2. PS/2 Mouse to operate
 3. SD card or Hard Disk if you want to save your creations
@@ -25,7 +27,7 @@ The editor divides the screen in various sections:
 
 * Menu Icons
 * Tools Icons
-* Color Palette
+* 256 Color Palette
 * Sprite Editor Grid
 * Sprite Representation
 
