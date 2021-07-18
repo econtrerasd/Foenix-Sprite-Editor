@@ -21,7 +21,16 @@ DESCRIPTION
 SPREDIT is a simple sprite editor writen in BASIC for the Foenix Series of Computers by Stefany Allaire,  
 check her website for more information https://c256foenix.com/
 
-The Program operates on the 320x240 graphical screen mode, this resolution allows users to see a bigger representation of the sprite, (I consider this useful for editing)
+The Motivations to create this program were:
+
+1. Investigate the capabilities of BASIC in the Foenix
+2. Explore the Hardware capabilities of the Foenix computer itself
+3. Learn some 65816 Assembler and banking 
+4. Provide Native tools in the Computer itself to break some dependency from external tools
+
+Design:
+
+The Program is mouse driven and operates on the 320x240 graphical screen mode, this resolution allows users to see a bigger representation of the sprite they are working on.
 
 The editor divides the screen in various sections:
 
