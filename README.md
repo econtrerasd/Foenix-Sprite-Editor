@@ -33,7 +33,7 @@ The program Operation will be discussed as we review each of the sections
 
 MENU ICONS               
 ------------------------------------------------
-The Menu Icons allow you to handle the main operations needed to administer your Sprites: 
+The Menu Icons allow you to handle the main operations needed to administer your Sprites (description of the icon in parenthesis): 
 * SAVE*                   (down arrow into box)
 * LOAD                    (up arrow from box)
 * ADD SPRITE              (plus sign)
@@ -46,8 +46,8 @@ The Menu Icons allow you to handle the main operations needed to administer your
 
 DRAWING TOOLS ICONS 
 ------------------------------------------------
-The Drawing tools have tools that help you in drawing your sprites
-* BRUSH SIZE              (Three dots of different sizes)
+The Drawing tools are tools that help you in drawing your sprites (description of the icon in parenthesis):
+* BRUSH SIZE              (Three dots representing the available brush sizes)
 
 *Alas!, there is currently only one tool, but hey we had to start somewhere!
 
