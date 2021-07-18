@@ -79,4 +79,4 @@ As you Edit the sprite yopu'll see how it looks on the sprite representation
 LIMITATIONS & KNOWN ISSUES
 --------------------------
 The sprite editor is limited to 255 sprites (not that I have tried to define that many)
-Loading and saving sprites 
+Load / Save routines have no validations if you type an invalid file name on this operations the program will end with an error 
