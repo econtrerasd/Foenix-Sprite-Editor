@@ -53,11 +53,11 @@ The Menu Icons allow you to handle the main operations needed to administer your
 * MOVE TO PREVIOUS SPRITE (< symbol)
 * EXIT PROGRAM            (X symbol)
 
-*When Saving keep in mind that the ther current filesystem allows only 8 character names, consider this when saving your sprite files, an extension .SPR will be added automatically to the name provided 
+*When Saving keep in mind that the ther current filesystem allows only 8 character names, consider this when saving your sprite files. A ".SPR" extension will be appended automatically to the name provided 
 
 DRAWING TOOLS ICONS 
 ------------------------------------------------
-The Drawing tools are tools that help you in drawing your sprites (description of the icon in parenthesis):
+The Drawing tools contains tools that help you in drawing your sprites (description of the icon in parenthesis):
 * BRUSH SIZE              (Three dots representing the available brush sizes)
 
 *Alas!, there is currently only one tool, but hey we had to start somewhere!
@@ -86,7 +86,7 @@ Using the BRUSH SIZE Tool will change how many pixels are drawn on the SPRITE ED
 
 What color did I used there?
 
-When you are editing an Sprite is easy to forget which color you were using on what section (yes even with 256 colors things can get confusing), and hunting down for the right color on the palette can consume precious time, so a function was added when clicking the right mouse button, this allows you to pick up the color under the mouse, this helps a lot in getting the right color faster!
+When you are editing an Sprite is easy to forget which color you were using on what section (yes even with 256 colors things can get confusing!), and hunting down for the right color on the palette can consume precious time. To alleviate this a color pickup function was added to the right mouse button, when you click it you'll pick up the color under the mouse (BTW: I made sure that you can't pick the grid color), this helps a lot in getting the right color faster!
 
 SPRITE REPRESENTATION
 -----------------------
@@ -120,6 +120,6 @@ MEMCOPY LINEAR &H100001,1024 to LINEAR &HC00000,1024
 
 LIMITATIONS & KNOWN ISSUES
 --------------------------
-* Theoretically the sprite editor is limited to 255 sprites (not that I have tried to test that many yet)
-* Load / Save routines have no validations! (current BASIC implementation has no commands to help in this regard, until I create some Machine language for this we are out of luck), if you type an invalid file name on LOAD or SAVE operations the program will end with an error.
+* Theoretically the sprite editor is limited to editing 255 sprites (not that I have tried to test that many yet)
+* Load / Save routines have no validations! (the current BASIC implementation has no commands to help in this regard, until I create some Machine language for this we are out of luck), if you type an invalid file name on LOAD or SAVE operations the program will end with an error.
 
