@@ -1,4 +1,4 @@
-# Foenix-Sprite-Editor
+# Foenix-Sprite-Editor V1.0
 By Ernesto Contreras
 
 Requirements
@@ -9,11 +9,14 @@ The Sprite Editor requires the following to operate
 2. PS/2 Mouse to operate
 3. SD card or Hard Disk if you want to save your creations
 
-You need to have two files for executing the Sprite Editor
+You need to have three files for executing the Sprite Editor
 1. SPREDIT.BAS
 2. SPREDIT.ML
+3. ICONS.SPR
 
-While most of the program is in BASIC a Machine Language Routine is required for redrawing Sprites on the Grid when moving from one sprite to another. The BASIC program loads this Machine Language routine from SPREDIT.ML when initializing
+While most of the program is in BASIC a few Machine Language Routines are required for redrawing Sprites on the Grid & mirroring sprites. 
+The BASIC program loads the Machine Language routines from SPREDIT.ML when initializing
+A sprite file 'ICONS.SPR', now contains the graphic icons used in the program, these icons can be edited to change the look of the icons in the program! 
 
 DESCRIPTION
 ----------------------------
@@ -45,22 +48,27 @@ The program Operation will be discussed as we review each one of the sections
 MENU ICONS               
 ------------------------------------------------
 The Menu Icons allow you to handle the main operations needed to administer your Sprites (description of the icon in parenthesis): 
-* SAVE*                   (down arrow into box)
-* LOAD                    (up arrow from box)
-* ADD SPRITE              (plus sign)
-* DELETE SPRITE           (Trash can)
-* MOVE TO NEXT SPRITE     (> symbol)
-* MOVE TO PREVIOUS SPRITE (< symbol)
-* EXIT PROGRAM            (X symbol)
+* SAVE                    (3.5 Disc with incoming arrow)
+* LOAD                    (3.5 Disc with outgoing arrow)
+* ADD SPRITE              (Space Invader with '+' sign)
+* DELETE SPRITE           (Space Invader with 'x' sign)
+* MOVE TO NEXT SPRITE     (-> arrow)
+* MOVE TO PREVIOUS SPRITE (<- arrow)
+* EXIT PROGRAM            (Exit Sign)
 
 *When Saving keep in mind that the ther current filesystem allows only 8 character names, consider this when saving your sprite files. A ".SPR" extension will be appended automatically to the name provided 
+*Validations when saving and loading are executed so that the program doesn't crash when you try to save with a filename already in use!
 
 DRAWING TOOLS ICONS 
 ------------------------------------------------
 The Drawing tools contains tools that help you in drawing your sprites (description of the icon in parenthesis):
-* BRUSH SIZE              (Three dots representing the available brush sizes)
-
-*Alas!, there is currently only one tool, but hey we had to start somewhere!
+* BRUSH SIZE              (Three pencils of increasing point size)
+* COPY                    (Copy Icon with space invader inside) 
+* PASTE                   (Board with space invader)
+* CLEAR                   (Empty space with CLR letters)
+* GRIDLINES               (Ruler with guidelines)
+* MIRROR X                (Ball Mirrored Horizontally)
+* MIRROR Y                (Ball Mirrored Vertically)
 
 COLOR PALETTE
 -------------------------------------------------
@@ -68,8 +76,12 @@ COLOR PALETTE
 The color palette includes a pre-selection of color Gradients, this color palette is currently hardcoded in the Editor. *(Future versions of the program will allow you to edit individual colors and save the new modified palette)
 
 Left Clicking on any color on the palette will change the brush color to the selected color, a rectangle below the palette will show the currently selected color for easy identification of the selected color
-
 *Note that the top left color of the Grid is the transparent color, this is denoted by an X symbol over this color
+
+A new section at the bottom of the screen shows the color components (RGB) of the current selected color with handles on the corresponding bar relating to the value of each component.
+Moving the handles with the mouse modifies the current color Value
+
+Icons at the rightmost part of the Drawing tools Bar allow you to either load a palette from disk or save a palette to disk (The filename provided is truncated to 8 letters and is appendedn a '.PAL' extension)
 
 Palette Color Credits
 * The current color palette was taken from (https://lospec.com/palette-list/duel) with a few modifications to add true black, true white and other slight color adjustments
@@ -121,5 +133,4 @@ MEMCOPY LINEAR &H100001,1024 to LINEAR &HC00000,1024
 LIMITATIONS & KNOWN ISSUES
 --------------------------
 * Theoretically the sprite editor is limited to editing 255 sprites (not that I have tried to test that many yet)
-* Load / Save routines have no validations! (the current BASIC implementation has no commands to help in this regard, until I create some Machine language for this we are out of luck), if you type an invalid file name on LOAD or SAVE operations the program will end with an error.
 
