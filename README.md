@@ -15,8 +15,7 @@ You need to have three files for executing the Sprite Editor
 3. ICONS.SPR
 
 While most of the program is in BASIC a few Machine Language Routines are required for redrawing Sprites on the Grid & mirroring sprites. 
-The BASIC program loads the Machine Language routines from SPREDIT.ML when initializing
-A sprite file 'ICONS.SPR', now contains the graphic icons used in the program, these icons can be edited to change the look of the icons in the program! 
+The BASIC program loads the Machine Language routines from SPREDIT.ML when initializing, finally a sprite file named 'ICONS.SPR' contains the graphic icons used in the program, these icons can be edited to change the look of the icons in the program! 
 
 DESCRIPTION
 ----------------------------
@@ -96,7 +95,7 @@ Need to put down pixels even faster?
 
 Using the BRUSH SIZE Tool will change how many pixels are drawn on the SPRITE EDITOR GRID, initial brush size is 1 pixel, but available options are 2x2 pixels and 3x3 pixels. Please note that 3x3 pixels lays down pixels at a reduced rate, this options are provided to allow quicker coverage of large sections.
 
-What color did I used there?
+What color did I just used there?
 
 When you are editing an Sprite is easy to forget which color you were using on what section (yes even with 256 colors things can get confusing!), and hunting down for the right color on the palette can consume precious time. To alleviate this a color pickup function was added to the right mouse button, when you click it you'll pick up the color under the mouse (BTW: I made sure that you can't pick the grid color), this helps a lot in getting the right color faster!
 
@@ -108,29 +107,29 @@ SPRITE FILE STRUCTURE
 ---------------------------
 The Save file structure is very simple*
 
-* First byte - number of sprites in file
-* Sprite data - blocks of 1024 bytes for each sprite in the file
+First byte - number of sprites in file
+Sprite data - blocks of 1024 bytes for each sprite in the file
 
-*The file structure might change in the future if more features are introduced, but if this happens compatibility will be maintained with the current file structure
+*The file structure might change in the future if more features are introduced, but if this happens I'll take care to maintain compatibility with the current file structure
 
 LOADING A SPRITE FROM BASIC
 ----------------------------
-Loading a Sprite File is as simple as using BLOAD to load the save file, for example: 
+Loading a Sprite File is simple, using BLOAD to load the sprite file into memory, for example: 
 
 BLOAD "SPRFILE.SPR", &H100000
 
 This example loads the sprite file into RAM beginning at Address $100000
 
-* The first byte at $100000 will contain the number of sprites in the file
-* After figuring out how many sprites use a MEMCOPY command to transfer the adequate number of sprites to VRAM Memory*
+-The first byte at $100000 will contain the number of sprites in the file
+-After figuring out how many sprites use a MEMCOPY command to transfer the adequate number of sprites to VRAM Memory*
 
 For example if you only have one sprite you would use the following command to transfer sprites to VRAM, in this example to $C00000
 
 MEMCOPY LINEAR &H100001,1024 to LINEAR &HC00000,1024
 
-*Currently the BLOAD command can't load data directly into VRAM memory, that's why you need to load to regular RAM first
+*Currently the BLOAD command can't load data directly into VRAM memory, that's why you need to load the sprites into regular RAM first
 
 LIMITATIONS & KNOWN ISSUES
 --------------------------
-* Theoretically the sprite editor is limited to editing 255 sprites (not that I have tried to test that many yet)
+* Theoretically the sprite editor is limited to editing 255 sprites (not that I have tried to define that many sprites... yet)
 
