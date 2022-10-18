@@ -1,5 +1,14 @@
-# Foenix-Sprite-Editor V1.0
+# Foenix-Sprite-Editor V1.1
 By Ernesto Contreras
+
+New Features on Version v1.1 (Aug 2022)
+---------------
+* A New color Palette with primary colours at the bottom and some revamped gradients to change colours that were pretty close on different gradients on the palette
+* Clicking on current color Box will show the RGB components of the current color
+* When changing colors the RGB sliders at the bottom update their position
+* When moving the RGB sliders the RGB values are shown at the top
+* Left clicking on a color on the screen will select that color and will select it on the palette
+* Updated Manual with screen captures
 
 Requirements
 --------------
